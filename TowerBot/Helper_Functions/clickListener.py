@@ -26,4 +26,3 @@ class ClickListener:
         with Listener(on_click=cls.on_click) as listener:
             listener.join()
         return cls.ClickPositions
-

@@ -18,7 +18,7 @@ class TowerConfig:
             "text"
         ] = "Click on the upper left corner\nand on the right bottom. with middle button"
         self.curStatus.update()
-        self.P1, self.P2 = CL.getClicks(nr=10)
+        self.P1, self.P2 = CL.getClicks(nr=2)
         self.curStatus["text"] = "Selected points:\nP1:{0}\nP2:{1}".format(
             self.P1, self.P2
         )
@@ -29,7 +29,7 @@ class TowerConfig:
             "text"
         ] = "Select as many maps you\nwant with middle button.\nPress right button to stop."
         self.curStatus.update()
-        self.grindPath = CL.getClicks(nr=10)
+        self.grindPath = CL.getClicks(nr=1)
         self.curStatus["text"] = "Selected {0} maps.".format(len(self.grindPath))
         self.curStatus.update()
         if len(self.grindPath) == 1:
