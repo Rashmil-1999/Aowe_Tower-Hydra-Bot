@@ -230,13 +230,13 @@ class TowerLogWindow:
             randChoice = random.choice(bossChests)
             pyautogui.click(randChoice)
             time.sleep(2)
-            # button = findConfirmButon(self.P1, self.P2)
-            # if button:
-            #     if self.grindGCReward:
-            #         button = findGCButton(self.P1, self.P2)
-            #         pyautogui.click(button)
-            #     else:
-            #         pyautogui.click(button)
+            button = findConfirmButon(self.P1, self.P2)
+            if button:
+                if self.grindGCReward:
+                    button = findGCButton(self.P1, self.P2)
+                    pyautogui.click(button)
+                else:
+                    pyautogui.click(button)
 
             return False
 

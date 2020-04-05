@@ -41,7 +41,7 @@ def isOutOfEnergy(P1, P2, grindMode, grindAmount):
                 time.sleep(0.4)
                 pyautogui.click(useButton)
                 time.sleep(1)
-                gringAmountSpent += 3
+                gringAmountSpent += 2
                 return gringAmountSpent
             else:
                 return "Not enough."
@@ -106,12 +106,43 @@ def findPlayer(P1, P2):
     player = findImg(os.path.join(picDirTowerBot, "player.jpg"), P1, P2)
     if player:
         return player
-    else:
-        return findImg(os.path.join(picDirTowerBot, "player2.jpg"), P1, P2)
+    player = findImg(os.path.join(picDirTowerBot, "player2.jpg"), P1, P2)
+    if player:
+        return player
+    player = findImg(os.path.join(picDirTowerBot, "hydraPlayer.jpg"), P1, P2)
+    if player:
+        return player
+    # player = findImg(os.path.join(picDirTowerBot, "hydraPlayer2.jpg"), P1, P2)
+    # if player:
+    #     return player
 
 
 def findEnemy(P1, P2):
     return findImg(os.path.join(picDirTowerBot, "enemy.jpg"), P1, P2, _type="many")
+
+
+def findHydraEnemy(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "hydraEnemy.jpg"), P1, P2, _type="many")
+
+
+def findHydraBoss(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "hydraBoss.jpg"), P1, P2)
+
+
+def findHydraHeroSelectBtn(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "hydraHeroSelect.jpg"), P1, P2)
+
+
+def findHydraHurryBattle(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "hydraHurryBattle.jpg"), P1, P2)
+
+
+def findVictory(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "victory.jpg"), P1, P2)
+
+
+def findDefeat(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "defeat.jpg"), P1, P2)
 
 
 def findChests(P1, P2):

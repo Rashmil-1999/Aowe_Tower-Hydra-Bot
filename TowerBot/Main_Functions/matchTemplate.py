@@ -5,7 +5,7 @@ import numpy as np
 def findImg(
     image, P1, P2=None, _type="one", precision=0.8, im=None, centerPosition=True
 ):
-    print("Search for: {0}".format(image.split("/")[-1]))
+    # print("Search for: {0}".format(image.split("/")[-1]))
     x1 = P1[0]
     y1 = P1[1]
     if im is None:
