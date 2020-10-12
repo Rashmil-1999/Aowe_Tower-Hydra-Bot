@@ -33,7 +33,7 @@ Using either `pip install python-opencv pyautogui` or `pip3 install python-openc
 
 ## APGLv3 LICENSE
 
-> Copyright (C) 2018, 2019 Vikrant Gajria
+> Copyright (C) 2018, 2019 Rashmil Panchani
 >
 > This program is free software: you can redistribute it and/or modify
 > it under the terms of the GNU Affero General Public License as published
