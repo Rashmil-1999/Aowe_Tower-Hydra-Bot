@@ -21,9 +21,9 @@ def findImg(
     img_rgb = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
     img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
     OldY, OldX = img_gray.shape
-    # img_gray = cv2.resize(
-    #     img_gray, (1033, 581)
-    # )  # Para o matchTemplate funcionar com todos os tamanhos.
+    img_gray = cv2.resize(
+        img_gray, (880, 493)
+    )  # Para o matchTemplate funcionar com todos os tamanhos.
     template = cv2.imread(image, 0)
     if template is None:
         return False
@@ -40,10 +40,10 @@ def findImg(
     if centerPosition:
         max_loc = (max_loc[0] + w / 2, max_loc[1] + h / 2)
 
-    # max_loc = (
-    #     int((((max_loc[0] - x1) / 1033) * OldX)) + x1,
-    #     int((((max_loc[1] - y1) / 581) * OldY) + y1),
-    # )
+    max_loc = (
+        int((((max_loc[0] - x1) / 880) * OldX) + x1),
+        int((((max_loc[1] - y1) / 493) * OldY) + y1),
+    )
     if (
         max_val < precision
     ):  # Valida se o melhor match encontrado é 'no minimo aceitavel'.
@@ -73,11 +73,11 @@ def findImg(
             ):
                 matches.append((x, y))
 
-        # lambFun = lambda x: (
-        #     int((((x[0] - x1) / 1033) * OldX) + x1),
-        #     int((((x[1] - y1) / 581) * OldY) + y1),
-        # )  # Corrige o resize do inicio.
-        # matches = list(map(lambFun, matches))
+        lambFun = lambda x: (
+            int((((x[0] - x1) / 880) * OldX) + x1),
+            int((((x[1] - y1) / 493) * OldY) + y1),
+        )  # Corrige o resize do inicio.
+        matches = list(map(lambFun, matches))
 
         return matches
 

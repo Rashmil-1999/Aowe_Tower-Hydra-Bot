@@ -199,3 +199,38 @@ def findUseButton(P1, P2):
 
 def findChestOrb(P1, P2):
     return findImg(os.path.join(picDirTowerBot, "chest_orb.jpg"), P1, P2)
+
+
+def findAbandonBtn(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "abandon.jpg"), P1, P2)
+
+
+def findOccupyBtn(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "occupybtn.jpg"), P1, P2)
+
+
+def findAutoConfigBtn(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "autoconfig.jpg"), P1, P2)
+
+
+def findMarchBtn(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "march.jpg"), P1, P2)
+
+
+def findHasLoaded(P1, P2):
+    return findImg(os.path.join(picDirTowerBot, "menu.jpg"), P1, P2)
+
+
+def findField(P1, P2):
+    field = findImg(os.path.join(picDirTowerBot, "field1.jpg"), P1, P2)
+    if field:
+        return field
+    field = findImg(os.path.join(picDirTowerBot, "field2.jpg"), P1, P2)
+    if field:
+        return field
+    field = findImg(os.path.join(picDirTowerBot, "field3.jpg"), P1, P2)
+    if field:
+        return field
+    field = findImg(os.path.join(picDirTowerBot, "field4.jpg"), P1, P2)
+    if field:
+        return field
